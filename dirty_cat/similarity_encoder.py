@@ -153,6 +153,9 @@ def get_kmeans_prototypes(X, n_prototypes, hashing_dim=128,
     neighbors.fit(projected)
     indexes_prototypes = np.unique(neighbors.kneighbors(centers, 1)[-1])
     if indexes_prototypes.shape[0] < n_prototypes:
+        tmp = np.zeros((n_prototypes,))
+        tmp[:indexes_prototypes.shape[0]] = indexes_prototypes
+        indexes_prototypes = tmp
         warnings.warn('Final number of unique prototypes is lower than ' +
                       'n_prototypes (expected)')
     return np.sort(X[indexes_prototypes])
