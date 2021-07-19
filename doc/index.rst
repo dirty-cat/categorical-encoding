@@ -13,7 +13,7 @@ robust to morphological variants**, such as typos, in the category strings.
 
 The :class:`SuperVectorizer` is a high-level transformer that can
 automatically turn a heterogeneous data table, as a pandas dataframe, to
-a numerical array, suitable for machin learning.
+a numerical array, suitable for maching learning.
 
 
 **Dirty category encoder**: `scikit-learn <https://scikit-learn.org>`_'s
@@ -23,10 +23,12 @@ a numerical array, suitable for machin learning.
   dimension corresponds to a topic that summarizes substrings captured.
 
 * :class:`SimilarityEncoder`, a simple modification of one-hot encoding
-  to capture the strings.
+  to capture the strings similarities.
 
-* :class:`MinHashEncoder`, very scalable
+* :class:`MinHashEncoder`, very scalable.
 
+* :class:`PretrainedFastText`, which captures semantic and morphological
+information using a pretrained fastText model.
 
 For a detailed description of the problem of encoding dirty categorical data,
 see `Similarity encoding for learning with dirty categorical variables
@@ -60,6 +62,7 @@ Encoders / Vectorizers
 
    GapEncoder
    MinHashEncoder
+   PretrainedFastText
    SimilarityEncoder
    TargetEncoder
    SuperVectorizer

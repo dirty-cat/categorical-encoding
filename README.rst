@@ -23,10 +23,12 @@ dirty_cat requires:
 - SciPy (>= 1.2)
 - scikit-learn (>= 0.20.0)
 
-Optional dependency:
+Optional dependencies:
 
 - python-Levenshtein for faster edit distances (not used for the n-gram
   distance)
+- fasttext (>= 0.9.2) to allow encoding of categorical data with pretrained
+  fastText models with the class `PretrainedFastText`
 
 User installation
 ~~~~~~~~~~~~~~~~~
